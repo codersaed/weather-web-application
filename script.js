@@ -1,4 +1,4 @@
-// api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+// weatherApi
 const weatherApi = {
     key: "0d354db3e63ccc87f83384480badbb62",
     baseUrl:"https://api.openweathermap.org/data/2.5/weather"
@@ -41,15 +41,12 @@ function showWeatherReport(weather) {
     let todayDate = document.getElementById("time");
     const currentDate = new Date();
     todayDate.innerText = dateManage(currentDate);
-
-
 }
 
 function dateManage(dateS) {
     const days = ['Sunday','Monday', 'Tuesday','Wednesday', 'Thursday','Friday','Saturday'];
 
     const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
     const year = dateS.getFullYear(); 
     const month = months[dateS.getMonth()];
     const date = dateS.getDate();
